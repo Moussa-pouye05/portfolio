@@ -60,6 +60,11 @@ nav{
 .card ul li a{
     text-decoration:none;
     color:rgb(0, 0, 0);
+    transition: transform 0.2s;
+}
+.card ul li a:hover{
+    color: red;
+    transform: scale(1);
 }
 .menu-list{
     display: none;
@@ -71,7 +76,7 @@ nav{
 }
 .content{
     width: 100%;
-    height: 90vh;
+    height:84vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
