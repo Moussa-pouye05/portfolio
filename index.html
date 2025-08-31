@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
     <title>Mon portefolio</title>
 </head>
 <body>
@@ -13,24 +15,41 @@
                 <div class="logo">
                     <p>PouyeDev</p>
                 </div>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
+                <ul id="nav-list">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">A propos</a></li>
                     <li><a href="#projects">Services</a></li>
-                    <li><a href="#contact">Experiences</a></li>
+                    <li><a href="#contact">Expériences</a></li>
                     <li><a href="#contact">Portfolio</a></li>
-                    <li><a href="#contact">Testimonials</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#contact">Témoignage</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="menu-list" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <script>
+                    let menulist = document.getElementById("nav-list")
+                    menulist.style.maxHeight = "0px";
+
+                    function toggleMenu(){
+                        if(menulist.style.maxHeight == "0px"){
+                            menulist.style.maxHeight = "335px";
+                        }else{
+                            menulist.style.maxHeight = "0px";
+                        }
+
+                    }
+
+                </script>
             </nav>
             <div class="content">
                 <div class="content-gauche">
-                    <p><span class="there">He There, I'm</span><br><span class="moussa">Moussa Pouye</span></p>
+                    <p><span class="there">He There, Je suis</span><br><span class="moussa">Moussa Pouye</span></p>
                     <hr>
-                    <p><span class="web">Web Developer </span></p>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos. Quisquam ad voluptatibus repellat facere vitae illo cum est quis, sed ex tempora quos laudantium! Consequuntur ad dignissimos corrupti dolorum!</p>
+                    <p><span class="web">Développeur freelance </span></p>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quos. Quisquam ad voluptatibus repellat facere vitae illo cum est quis</p>
                     <div class="bouton">
-                        <button>Contact Me</button>
+                        <button>Contact Moi</button>
                     </div>
                 </div>
                 <div class="content-droite">
