@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="card">
+        <div class="card" id="home">
             <nav>
                 <div class="logo">
                     <p>PouyeDev</p>
@@ -24,8 +24,8 @@
                     <li><a href="#contact">Témoignage</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="menu-list" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars"></i>
+                <div class="menu-list"  onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars" id="menu-list"></i>
                 </div>
                 <script>
                     let menulist = document.getElementById("nav-list")
@@ -36,13 +36,22 @@
                             menulist.style.maxHeight = "335px";
                         }else{
                             menulist.style.maxHeight = "0px";
+                            document.addEventListener("click", (event)=>{
+                                let about = document.getElementById("about");
+                                let icon = document.getElementById("menu-list");
+                                if(menulist.style.maxHeight == "335px"){
+                                   if(about.contains(event.target)){
+                                        menulist.style.maxHeight = "0px";
+                                   }
+                                }
+                            })
                         }
 
                     }
 
                 </script>
             </nav>
-            <div class="content">
+            <div class="content" id="about">
                 <div class="content-gauche">
                     <p><span class="there">He There, Je suis</span><br><span class="moussa">Moussa Pouye</span></p>
                     <hr>
